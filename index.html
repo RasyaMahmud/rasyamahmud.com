@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Website Rasya Mahmud</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="navbar-container">
+          <!-- Logo -->
+          <div class="logo">
+            <a>Rasya Mahmud</a>
+          </div>
+
+          <!-- Dark Mode Toggle -->
+          <button class="dark-toggle" id="toggleDark">
+            <span id="darkIcon">🌙</span>
+        </button>
+    
+          <!-- Navigation Links -->
+          <ul class="nav-links" id="nav-links">
+            <li><a href="support.html">Support</a></li>
+            <li><a href="download.html">Download</a></li>
+            <li><a href="sosmed.html">Social Media</a></li>
+          </ul>
+
+            <!-- Mobile Menu Button -->
+                <button class="menu-button" id="menu-button" aria-label="Toggle Menu">☰</button>
+            </div>
+        </nav>
+            
+            <!-- Hero / Home Section -->
+            <section id="home" class="home-section">
+                <div class="home-content">
+                <h1>Selamat datang di situs resmi Rasya Mahmud</h1>
+                <p>
+                    Rasya Mahmud adalah seorang kreator konten asal Indonesia yang dikenal melalui platform YouTube berkat dedikasinya dalam menyajikan konten bertema gaming, khususnya Minecraft. Ia menyajikan gameplay, tutorial, dan berbagai tips dengan pendekatan santai dan edukatif. Dengan gaya penyampaian yang ramah dan jujur, Rasya berhasil membangun komunitas yang aktif dan loyal, serta dikenal lewat konten room tour, survival gameplay, dan interaksi hangat bersama audiens.
+                </p>
+                </div>
+            </section>
+
+            <!-- Favorite Game Section -->
+            <section id="favorite-game" class="game-section">
+                <div class="game-content">
+                <h2>Game Favorit: Minecraft</h2>
+                <img src="/minecraft.jpg" alt="Minecraft Cover" class="game-image">
+                <p>
+                    Minecraft adalah game favorit Rasya Mahmud karena memberikan kebebasan tak terbatas untuk berkreasi, bertahan hidup, dan mengeksplorasi dunia virtual. Game ini bukan hanya sekadar hiburan, tetapi juga platform edukatif yang mendorong kreativitas, logika, dan imajinasi. Dalam kanal YouTube-nya, Rasya banyak membagikan momen saat bermain Minecraft, baik dalam mode survival, hardcore, maupun showcase build.
+                </p>
+                <p>
+                    Rasya menyukai cara Minecraft memberikan pengalaman unik dalam setiap sesi permainan. Dengan berbagai mod dan map buatan sendiri maupun komunitas, ia sering berbagi hasil kreasinya kepada para penggemar. Inilah yang membuat Minecraft bukan sekadar permainan, melainkan bagian penting dari perjalanan kreatifnya di dunia digital.
+                </p>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <p>&copy; 2025 Rasya Mahmud. All rights reserved.</p>
+              </footer>
+
+            <script src="script.js"></script>
+            <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.getElementById("menu-button");
+    const navLinks = document.getElementById("nav-links");
+
+    menuButton.addEventListener("click", function () {
+      navLinks.classList.toggle("active");
+
+      // Opsional: ganti ikon ☰ ↔ ✖
+      menuButton.textContent = navLinks.classList.contains("active") ? "✖" : "☰";
+    });
+  });
+</script>
+
+</body>
+</html>

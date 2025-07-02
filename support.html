@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Support - Rasya Mahmud</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="navbar-container">
+          <!-- Logo -->
+          <div class="logo">
+            <a>Rasya Mahmud</a>
+          </div>
+
+          <!-- Dark Mode Toggle -->
+          <button class="dark-toggle" id="toggleDark">
+            <span id="darkIcon">🌙</span>
+        </button>
+    
+          <!-- Navigation Links -->
+          <ul class="nav-links" id="nav-links">
+            <li><a href="support.html">Support</a></li>
+            <li><a href="download.html">Download</a></li>
+            <li><a href="sosmed.html">Social Media</a></li>
+          </ul>
+
+            <!-- Mobile Menu Button -->
+                <button class="menu-button" id="menu-button" aria-label="Toggle Menu">☰</button>
+            </div>
+        </nav>
+
+        <button onclick="history.back()" class="back-button">←</button>
+
+         <!-- Reuse navbar jika ingin disatukan -->
+  <section class="support-section">
+    <div class="support-container">
+
+      <div class="support-item">
+        <h2>I</h2>
+        <h2>Donate Rasya</h2>
+        <p>Anda dapat mendukung konten Rasya melalui platform donasi seperti Saweria. Setiap dukungan Anda sangat berarti untuk pengembangan konten ke depannya.</p>
+      </div>
+
+        <div class="center-button">
+            <a href="https://saweria.co/RasyaMahmud" target="_blank" class="saweria-button">
+                <i class="fas fa-hand-holding-heart"></i>
+                <span>Donate on Saweria</span>
+            </a>
+        </div>
+
+
+
+            <footer class="footer">
+                <p>&copy; 2025 Rasya Mahmud. All rights reserved.</p>
+              </footer>
+
+            <script src="script.js"></script>
+            <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.getElementById("menu-button");
+    const navLinks = document.getElementById("nav-links");
+
+    menuButton.addEventListener("click", function () {
+      navLinks.classList.toggle("active");
+
+      // Opsional: ganti ikon ☰ ↔ ✖
+      menuButton.textContent = navLinks.classList.contains("active") ? "✖" : "☰";
+    });
+  });
+</script>
+
+
+</body>
+</html>

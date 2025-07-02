@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Media - Rasya Mahmud</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+</head>
+<body>
+    
+    <nav class="navbar">
+        <div class="navbar-container">
+          <!-- Logo -->
+          <div class="logo">
+            <a>Rasya Mahmud</a>
+          </div>
+
+          <!-- Dark Mode Toggle -->
+          <button class="dark-toggle" id="toggleDark">
+            <span id="darkIcon">🌙</span>
+        </button>
+    
+          <!-- Navigation Links -->
+          <ul class="nav-links" id="nav-links">
+            <li><a href="support.html">Support</a></li>
+            <li><a href="download.html">Download</a></li>
+            <li><a href="sosmed.html">Social Media</a></li>
+          </ul>
+
+            <!-- Mobile Menu Button -->
+                <button class="menu-button" id="menu-button" aria-label="Toggle Menu">☰</button>
+            </div>
+        </nav>
+
+        <button onclick="history.back()" class="back-button">←</button>
+
+         <!-- Reuse navbar jika ingin disatukan -->
+  <section class="support-section">
+    <div class="support-container">
+
+      <div class="support-item">
+        <h2>III</h2>
+        <h2>Social Media Rasya</h2>
+        <p>Anda dapat mengikuti Rasya melalui beberapa platform social media yang ada.</p>
+      </div>
+
+
+        <section id="social" class="social-section">
+            <a href="https://www.youtube.com/channel/UCCy9XwQbPZv45daCzwLE_Jw" target="_blank" class="social-button youtube">
+                <i class="fab fa-youtube"></i> YouTube
+            </a>
+
+            <a href="https://www.instagram.com/dimianrasya/" target="_blank" class="social-button instagram">
+                <i class="fab fa-instagram"></i> Instagram
+            </a>
+
+            <a href="https://www.tiktok.com/@rasyamahmudmc?is_from_webapp=1&sender_device=pc" target="_blank" class="social-button tiktok">
+                <i class="fab fa-tiktok"></i> TikTok
+            </a>
+            
+            <a href="https://discord.com/invite/xW7ptW2" target="_blank" class="social-button discord">
+                <i class="fab fa-discord"></i> Discord
+            </a>
+        </div>
+        </section>
+
+
+
+            <footer class="footer">
+                <p>&copy; 2025 Rasya Mahmud. All rights reserved.</p>
+              </footer>
+
+            <script src="script.js"></script>
+            <script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const menuButton = document.getElementById("menu-button");
+    const navLinks = document.getElementById("nav-links");
+
+    menuButton.addEventListener("click", function () {
+      navLinks.classList.toggle("active");
+
+      // Opsional: ganti ikon ☰ ↔ ✖
+      menuButton.textContent = navLinks.classList.contains("active") ? "✖" : "☰";
+    });
+  });
+</script>
+
+
+</body>
+</html>

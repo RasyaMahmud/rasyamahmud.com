@@ -1,0 +1,427 @@
+html, body {
+    margin: 0;
+    padding: 0;
+  }  
+
+:root {
+    --bg-gradient: linear-gradient(to right, #4f46e5, #7c3aed);
+    --text-color: #ffffff;
+    --link-hover: #c5c5ff;
+    --button-bg: #ffffff;
+    --button-text: #4f46e5;
+    --body-bg: #f9f9f9;
+    --content-text: #222;
+    --section-bg: #ffffff;
+  }
+  
+  body {
+    font-family: 'Segoe UI', sans-serif;
+    background-color: var(--body-bg);
+    transition: background-color 0.3s, color 0.3s;
+    color: var(--content-text);
+  }
+
+  .home-content,
+  .game-content,
+  .footer {
+  color: var(--content-text);
+}
+  
+  .navbar {
+  background: var(--bg-gradient);
+  width: 100%;
+  padding: 16px 0; /* hanya atas-bawah */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.15);
+  margin: 0;
+}
+
+.navbar-container {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 24px; /* opsional: biar isi tidak mepet pinggir */
+  box-sizing: border-box;
+}
+
+  
+  .logo a {
+    color: var(--text-color);
+    font-size: 24px;
+    font-weight: bold;
+    text-decoration: none;
+    cursor:text;
+  }
+  
+  .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 24px;
+    font-weight: bold;
+  }
+  
+  .nav-links a {
+    color: var(--text-color);
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s ease;
+  }
+  
+  .nav-links a:hover {
+    color: var(--link-hover);
+  }
+  
+  /* Menu button */
+.menu-button {
+  display: none;
+  background: transparent;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: var(--content-text);
+  transition: color 0.3s ease;
+}
+  
+  .dark-toggle {
+    background: none;
+    border: none;
+    font-size: 20px;
+    color: var(--text-color);
+    cursor: pointer;
+    margin-left: 16px;
+  }
+
+  /* Home Section */
+.home-section {
+    padding: 60px 24px;
+    background-color: var(--section-bg);
+    color: var(--content-text);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+  
+  .home-content {
+    max-width: 800px;
+    margin: auto;
+    transition: color 0.3s ease;
+  }
+  
+  .home-content h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+  }
+  
+  .home-content p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  .game-section {
+    padding: 60px 24px;
+    background-color: #f5f5f5;
+  }
+  
+  body.dark .game-section {
+    background-color: #1a1a1a;
+  }
+  
+  .game-content {
+    max-width: 800px;
+    margin: auto;
+    color: var(--content-text);
+  }
+  
+  .game-content h2 {
+    font-size: 28px;
+    margin-bottom: 16px;
+  }
+  
+  .game-content p {
+    font-size: 18px;
+    line-height: 1.6;
+    margin-top: 12px;
+  }
+  
+  .game-image {
+    width: 100%;
+    max-width: 400px;
+    display: block;
+    margin: 0 auto 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  }
+
+  .footer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  text-align: center;
+  padding: 12px;
+  background-color: #eee;
+  color: #333;
+  font-size: 14px;
+  z-index: 999;
+}
+  
+  body.dark .footer {
+    background-color: #1e1e1e;
+    color: #bbb;
+  }
+
+  .home-section,
+.game-section {
+  background-color: var(--section-bg);
+  color: var(--content-text);
+}
+
+h2 {
+  text-align: center;
+}
+
+.support-item {
+  text-align: center;
+}
+
+.center-button {
+  text-align: center;
+  margin-top: 40px;
+  padding-bottom: 50px;
+}
+
+.saweria-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: orange;
+  color: white;
+  font-size: 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.saweria-button:hover {
+  background: rgb(203, 133, 2);
+  transform: scale(1.05);
+}
+
+.saweria-button i {
+  animation: pulse 1.5s infinite;
+}
+
+.download-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  background: rgb(1, 169, 184);
+  color: white;
+  font-size: 16px;
+  border-radius: 10px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.download-button:hover {
+  background: rgb(1, 122, 133);
+  transform: scale(1.05);
+}
+
+.download-button i {
+  animation: pulse 1.5s infinite;
+}
+
+@keyframes pulse {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.15); }
+  100% { transform: scale(1); }
+}
+
+.back-button {
+  margin: 16px 24px 0 24px; /* atas kanan bawah kiri */
+  padding: 8px 16px;
+  background-color: #444;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  display: inline-block;
+}
+
+.back-button:hover {
+  background-color: #666;
+}
+
+body.dark .back-button {
+  background-color: #ddd;
+  color: #222;
+}
+
+body.dark .back-button:hover {
+  background-color: #bbb;
+}
+
+/* Elemen global */
+body,
+.navbar,
+.footer,
+.home-section,
+.home-content,
+.game-section,
+.game-content,
+.support-section,
+.support-item {
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.social-section {
+  padding: 60px 24px;
+  background-color: var(--section-bg);
+  color: var(--content-text);
+  text-align: center;              /* ⬅️ Memusatkan teks */
+  /* display: flex;
+  flex-direction: column; */
+  align-items: center;             /* ⬅️ Memusatkan elemen secara horizontal */
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.section-title {
+  font-size: 28px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.social-buttons {
+  display: flex;
+  flex-direction: row;       /* Baris ke samping */
+  flex-wrap: wrap;           /* Pindah baris jika tidak muat */
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+}
+
+.social-button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 20px;
+  font-size: 16px;
+  font-weight: 600;
+  border-radius: 10px;
+  color: white;
+  text-decoration: none;
+  transition: transform 0.2s ease, background-color 0.3s ease;
+  white-space: nowrap;
+}
+
+.social-button i {
+  font-size: 22px;
+}
+
+.social-button:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.25);
+  opacity: 0.95;
+}
+
+.instagram { background-color: #E1306C; }
+.youtube   { background-color: #FF0000; }
+.tiktok    { background-color: #000000; }
+.discord   { background-color: #5865F2; }
+
+
+/* Dark mode support */
+body.dark .social-button {
+  color: #fff;
+  opacity: 0.95;
+}
+
+body.dark .social-button:hover {
+  opacity: 1;
+}
+  
+  /* DARK MODE STYLES */
+  body.dark {
+    --bg-gradient: linear-gradient(to right, #1e1e2f, #2e2e3a);
+    --text-color: #e4e4e4;
+    --link-hover: #8a8d8c;
+    --button-bg: #ffffff;
+    --button-text: #1e1e2f;
+    --body-bg: #121212;
+    --content-text: #e0e0e0;
+    --section-bg: #1a1a1a;
+  }
+  
+  /* Responsive */
+  @media (max-width: 768px) {
+    .nav-links {
+      display: none;
+    }
+    .menu-button {
+      display: block;
+    }
+  }
+  
+@media (max-width: 768px) {
+  .nav-links {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: var(--section-bg);
+    position: absolute;
+    top: 64px;
+    left: 0;
+    right: 0;
+    overflow: hidden;
+    max-height: 0;
+    opacity: 0;
+    transition: max-height 0.4s ease, opacity 0.4s ease;
+    padding: 0;
+    z-index: 999;
+  }
+
+  .nav-links.active {
+    max-height: 500px; /* Cukup besar utk semua item */
+    opacity: 1;
+    padding: 10px 0;
+  }
+
+  .nav-links li {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    padding: 12px 0;
+    transition: background-color 0.2s ease;
+  }
+
+  .nav-links li:last-child {
+    border-bottom: none;
+  }
+
+  .nav-links a {
+    display: block;
+    width: 100%;
+    color: var(--content-text);
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 600;
+  }
+
+  .nav-links li:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+  }
+
+  body.dark .nav-links li {
+    border-bottom: 1px solid #444;
+  }
+
+  body.dark .nav-links li:hover {
+    background-color: rgba(255, 255, 255, 0.05);
+  }
+}
